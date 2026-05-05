@@ -62,7 +62,7 @@ class _LatihanScreenState2 extends State<LatihanScreen2> {
               child: const Icon(Icons.add, color: Colors.white),
             )
           : null,
-*/
+      */
       // bottom BottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex, // Active tab
