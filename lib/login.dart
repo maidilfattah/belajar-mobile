@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 20,
             children: [
-              Image.asset("asset/gambar1.jpeg", height: 100, width: 100),
+              Image.asset("asset/gambar1.jpeg", height: 150, width: 150),
               Row(
                 // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -35,10 +35,29 @@ class _LoginScreenState extends State<LoginScreen> {
                 autofocus: true,
                 style: TextStyle(),
                 decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.account_box),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                   labelText: "Username",
+                ),
+              ),
+              TextField(
+                autofocus: true,
+                style: TextStyle(),
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                  labelText: "Password",
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () {},
+                  child: Text("lanjut boss"),
                 ),
               ),
             ],
