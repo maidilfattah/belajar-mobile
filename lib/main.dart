@@ -1,13 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_1/wa.dart';
-import 'package:flutter_application_1/wa_contact.dart';
-//import 'package:flutter_application_1/latihan.dart';
-//import 'package:flutter_application_1/latihan_2.dart';
-//import 'package:flutter_application_1/login.dart';
-//import 'package:flutter_application_1/latihan_3.dart';
-//import 'package:flutter_application_1/latihan_4.dart';
+import 'package:flutter_application_1/FarmApp1.dart';
 
 void main() {
   runApp(DevicePreview(enabled: !kReleaseMode, builder: (context) => MyApp()));
@@ -22,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: WaContact(),
+      home: Farmapp1Screen(),
     );
   }
 }
