@@ -13,21 +13,21 @@ class _Farmapp1ScreenState extends State<Farmapp1Screen> {
     var stack = Stack(
       clipBehavior: Clip.none, // Biar daun nggak kepotong
       children: [
-        // 1. Kotak Oranye (Taruh di paling bawah Stack)
+        //Kotak Oren
         Positioned(
           bottom: 0,
           left: 0,
           right: 0,
           child: Container(
             padding: const EdgeInsets.symmetric(
-              horizontal: 12, // Jarak kanan-kiri di dalam kotak
-              vertical: 10, // Jarak atas-bawah di dalam kotak
+              horizontal: 12, // Jarak kanan-kiri di dalem kotak
+              vertical: 10, // Jarak atas-bawah di dalem kotak
             ),
             decoration: BoxDecoration(
               color: Colors.orange,
               borderRadius: BorderRadius.circular(10),
             ),
-            // Membungkus teks dengan Center agar angka 2 tepat di tengah
+            // Center untuk angka 2 ditengah
             child: const Center(
               child: Text(
                 "2",
@@ -41,16 +41,16 @@ class _Farmapp1ScreenState extends State<Farmapp1Screen> {
           ),
         ),
 
-        // 2. Icon Daun (Taruh di atas kotak)
+        // 2. Icon Daun
         const Positioned(
           top: 0,
-          right: 4, // Mengatur posisi daun di sebelah kanan atas kotak
+          right: 4, // posisi daun di sebelah kanan atas kotak
           child: Icon(Icons.spa, color: Colors.white, size: 22),
         ),
       ],
     );
     return Scaffold(
-      backgroundColor: const Color(0xFF128C4F), // Warna hijau yang mirip asli
+      backgroundColor: Colors.green,
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

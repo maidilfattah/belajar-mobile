@@ -1,7 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/FarmApp1.dart';
+//import 'package:flutter_application_1/FarmApp1.dart';
+//import 'package:flutter_application_1/FarmApp2.dart';
+import 'package:flutter_application_1/latihancrud.dart';
 
 void main() {
   runApp(DevicePreview(enabled: !kReleaseMode, builder: (context) => MyApp()));
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: Farmapp1Screen(),
+      home: CrudScreen(),
     );
   }
 }
