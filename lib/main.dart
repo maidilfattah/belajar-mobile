@@ -1,7 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/latihanfilesharing.dart';
+import 'package:flutter_application_1/latihanmetadata.dart';
+//import 'package:flutter_application_1/latihanfilesharing.dart';
 //import 'package:flutter_application_1/latihancrud.dart';
 // import 'package:flutter_application_1/latihanlocals.dart';
 // import 'package:flutter_application_1/latihanlocals2.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: LatihanFileSharing(),
+      home: LatihanMetaData(),
     );
   }
 }
