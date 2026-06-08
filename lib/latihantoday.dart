@@ -11,23 +11,15 @@ class _LatihanTodayState extends State<LatihanToday> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("ini title")),
-      body: Center(
-        child: Container(
-          color: Colors.yellow,
-          width: 150,
-          height: 150,
-          child: Text(
-            "ini bagian body hahahhahahahahahahahahahahahahah",
-            style: TextStyle(
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              fontStyle: FontStyle.italic,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
+      appBar: AppBar(title: Text("Latihan row dan coloum")),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("Text 1"),
+          Text("Text 2"),
+          Row(children: <Widget>[Text("Text 3 "), Text("Text 4")]),
+        ],
       ),
     );
   }
