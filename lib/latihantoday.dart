@@ -12,18 +12,24 @@ class _LatihanTodayState extends State<LatihanToday> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Row and Column", style: TextStyle(color: Colors.white)),
+        title: Text("Latihan Container", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("Text 1"),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Text 2")],
+
+      body: Container(
+        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
+        color: Colors.black,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.yellow, Colors.blue],
+            ),
           ),
-        ],
+        ),
       ),
     );
   }
