@@ -8,32 +8,27 @@ class LatihanToday extends StatefulWidget {
 }
 
 class _LatihanTodayState extends State<LatihanToday> {
-  int number = 0;
-  void tombolTambah() {
-    setState(() {
-      number = number + 1;
-    });
-  }
-
+  String message = "Belum ditekan";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Statefull widget demo",
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.green,
+        title: Text("Anonymous Method", style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.lightBlueAccent,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 10 + number.toDouble()),
+            Padding(padding: const EdgeInsets.all(20.0), child: Text(message)),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  message = "Sudah ditekan";
+                });
+              },
+              child: Text("Tombol"),
             ),
-            ElevatedButton(onPressed: tombolTambah, child: Text("TambahText")),
           ],
         ),
       ),
