@@ -8,26 +8,23 @@ class LatihanToday extends StatefulWidget {
 }
 
 class _LatihanTodayState extends State<LatihanToday> {
-  String message = "Belum ditekan";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Anonymous Method", style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.lightBlueAccent,
-      ),
+      appBar: AppBar(title: Text("Latihan TextStyle")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(padding: const EdgeInsets.all(20.0), child: Text(message)),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  message = "Sudah ditekan";
-                });
-              },
-              child: Text("Tombol"),
+            Text(
+              "Hallo Guys",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.red,
+                decorationStyle: TextDecorationStyle.wavy,
+              ),
             ),
           ],
         ),
