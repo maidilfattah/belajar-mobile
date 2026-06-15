@@ -13,117 +13,23 @@ class _LatihanTodayState extends State<LatihanToday> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Latihan Stack dan Align",
+          "Latihan Image Witget",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.green,
       ),
-      body: Stack(
-        children: [
-          //background
-          Column(
-            children: [
-              Flexible(
-                flex: 1,
-                child: Row(
-                  children: [
-                    Flexible(flex: 1, child: Container(color: Colors.white)),
-                    Flexible(flex: 1, child: Container(color: Colors.grey)),
-                  ],
-                ),
-              ),
-              Flexible(
-                flex: 1,
-                child: Row(
-                  children: [
-                    Flexible(flex: 1, child: Container(color: Colors.grey)),
-                    Flexible(flex: 1, child: Container(color: Colors.white)),
-                  ],
-                ),
-              ),
-            ],
+      body: Center(
+        child: Container(
+          color: Colors.black,
+          width: 200,
+          height: 200,
+          padding: EdgeInsets.all(5),
+          child: Image(
+            image: AssetImage("asset/gambar1.jpeg"),
+            fit: BoxFit.cover,
+            //repeat: ImageRepeat.repeat,
           ),
-          //listview
-          ListView(
-            children: [
-              Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child: Text(
-                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          //button
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: ElevatedButton(onPressed: () {}, child: Text("Klik")),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
