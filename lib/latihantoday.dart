@@ -12,25 +12,117 @@ class _LatihanTodayState extends State<LatihanToday> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fleksibel Widget", style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.black,
+        title: Text(
+          "Latihan Stack dan Align",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.green,
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Flexible(
-            flex: 1,
-            child: Row(
-              children: [
-                Flexible(flex: 1, child: Container(color: Colors.red)),
-                Flexible(flex: 1, child: Container(color: Colors.yellow)),
-                Flexible(flex: 1, child: Container(color: Colors.green)),
-              ],
+          //background
+          Column(
+            children: [
+              Flexible(
+                flex: 1,
+                child: Row(
+                  children: [
+                    Flexible(flex: 1, child: Container(color: Colors.white)),
+                    Flexible(flex: 1, child: Container(color: Colors.grey)),
+                  ],
+                ),
+              ),
+              Flexible(
+                flex: 1,
+                child: Row(
+                  children: [
+                    Flexible(flex: 1, child: Container(color: Colors.grey)),
+                    Flexible(flex: 1, child: Container(color: Colors.white)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          //listview
+          ListView(
+            children: [
+              Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "haaaaaaaaaaaaaaaaaaaaaaaaaaaahhah",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          //button
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: ElevatedButton(onPressed: () {}, child: Text("Klik")),
             ),
           ),
-
-          Flexible(flex: 2, child: Container(color: Colors.blue)),
-
-          Flexible(flex: 1, child: Container(color: Colors.purple)),
         ],
       ),
     );
