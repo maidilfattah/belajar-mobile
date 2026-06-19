@@ -8,92 +8,80 @@ class LatihanToday extends StatefulWidget {
 }
 
 class _LatihanTodayState extends State<LatihanToday> {
-  Color color1 = Colors.red;
-  Color colors2 = Colors.amber;
-  Color targetColor = Colors.blue;
-  bool isAccepted = false;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Login"),
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+      ),
+      body: Center(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+          ),
+          onPressed: () {
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => HalamanDashboard()),
+              (Route<dynamic> route) => false,
+            );
+          },
+          child: const Text("Lanjut ke Dashboard"),
+        ),
+      ),
+    );
+  }
+}
+
+class HalamanDashboard extends StatelessWidget {
+  const HalamanDashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Latihan Draggable, DragTarget, SizedBox, Material",
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.green,
+        title: Text("Halaman Dashboard"),
+        backgroundColor: Colors.grey,
+        foregroundColor: Colors.black,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Draggable<Color>(
-                data: color1,
-                feedback: SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Material(
-                    // FIXED HERE: Using withValues instead of withOpacity
-                    color: color1.withValues(alpha: 0.6),
-                    shape: const StadiumBorder(),
-                    elevation: 3,
-                  ),
-                ),
-                childWhenDragging: const SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Material(
-                    color: Colors.black26,
-                    shape: StadiumBorder(),
-                    elevation: 0,
-                  ),
-                ),
-                child: SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Material(
-                    color: color1,
-                    shape: const StadiumBorder(),
-                    elevation: 3,
-                  ),
-                ),
-              ),
-            ],
-          ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HalamanKedua()),
+            );
+          },
+          child: Text("Halaman Kedua"),
+        ),
+      ),
+    );
+  }
+}
 
-          DragTarget<Color>(
-            onWillAcceptWithDetails: (details) => true,
-            onAcceptWithDetails: (details) {
-              setState(() {
-                isAccepted = true;
-                targetColor = details.data;
-              });
-            },
-            builder: (context, candidateData, rejectedData) {
-              return (isAccepted)
-                  ? SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: Material(
-                        color: targetColor,
-                        shape: const StadiumBorder(),
-                        elevation: 3,
-                      ),
-                    )
-                  : const SizedBox(
-                      width: 100,
-                      height: 100,
-                      child: Material(
-                        color: Colors.black26,
-                        shape: StadiumBorder(),
-                        elevation: 3,
-                      ),
-                    );
-            },
-          ),
-        ],
+class HalamanKedua extends StatelessWidget {
+  const HalamanKedua({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Halaman Kedua"),
+        backgroundColor: Colors.grey,
+        foregroundColor: Colors.black,
+        automaticallyImplyLeading: false,
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text("Kembali ke Dashboard"),
+        ),
       ),
     );
   }
