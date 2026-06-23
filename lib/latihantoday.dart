@@ -12,51 +12,24 @@ class _LatihanTodayState extends State<LatihanToday> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
-        backgroundColor: Colors.black,
+        title: Text("Halaman 1"),
+        backgroundColor: Colors.brown,
         foregroundColor: Colors.white,
       ),
       body: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.brown,
             foregroundColor: Colors.white,
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 25),
           ),
-          onPressed: () {
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(builder: (context) => HalamanDashboard()),
-              (Route<dynamic> route) => false,
-            );
-          },
-          child: const Text("Lanjut ke Dashboard"),
-        ),
-      ),
-    );
-  }
-}
-
-class HalamanDashboard extends StatelessWidget {
-  const HalamanDashboard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Halaman Dashboard"),
-        backgroundColor: Colors.grey,
-        foregroundColor: Colors.black,
-      ),
-      body: Center(
-        child: ElevatedButton(
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => HalamanKedua()),
             );
           },
-          child: Text("Halaman Kedua"),
+          child: Text("Halaman 2", style: TextStyle(fontSize: 16)),
         ),
       ),
     );
@@ -70,17 +43,22 @@ class HalamanKedua extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Halaman Kedua"),
-        backgroundColor: Colors.grey,
-        foregroundColor: Colors.black,
+        title: Text("Halaman 2"),
+        backgroundColor: Colors.brown,
+        foregroundColor: Colors.white,
         automaticallyImplyLeading: false,
       ),
       body: Center(
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.brown,
+            foregroundColor: Colors.white,
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 25),
+          ),
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text("Kembali ke Dashboard"),
+          child: Text("Halaman 1", style: TextStyle(fontSize: 16)),
         ),
       ),
     );
