@@ -12,8 +12,8 @@ class _LatihanTodayState extends State<LatihanToday> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.adb, color: Colors.black),
-        title: Text("AppBar Example", style: TextStyle(color: Colors.black)),
+        title: Text("Appbar Example"),
+        leading: Icon(Icons.adb),
         actions: <Widget>[
           IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
           IconButton(onPressed: () {}, icon: Icon(Icons.exit_to_app)),
@@ -21,7 +21,7 @@ class _LatihanTodayState extends State<LatihanToday> {
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.red, Colors.pink],
+              colors: [Colors.yellow, Colors.green],
               begin: FractionalOffset.topLeft,
               end: FractionalOffset.bottomRight,
             ),
